@@ -1,0 +1,16 @@
+# Python缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+
+# 虚拟环境
+env/
+venv/
+.venv/
+
+# IDE配置
+.idea/
+.vscode/
+.DS_Store
