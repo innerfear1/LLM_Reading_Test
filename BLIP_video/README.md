@@ -63,6 +63,33 @@ python BLIP_video/BLIP_CAM.py \
   --output /path/to/output.mp4
 ```
 
+### BLIP2（VQA）使用
+
+实时 VQA（默认不启用 VQA，需要显式加 `--vqa`）：
+
+```bash
+python BLIP_video/BLIP2_video.py --vqa --question "What is the person doing?"
+```
+
+离线 VQA 并导出带答案的视频：
+
+```bash
+python BLIP_video/BLIP2_video.py \
+  --vqa \
+  --video /path/to/input.mp4 \
+  --question "What animals appear?" \
+  --output /path/to/output.mp4
+```
+
+使用本地已下载 BLIP2 模型目录（不联网下载）：
+
+```bash
+python BLIP_video/BLIP2_video.py \
+  --model-path /path/to/local/blip2-opt-2.7b \
+  --vqa \
+  --question "Describe the scene."
+```
+
 ## 💡 Use Cases
 
 - **Accessibility Tools**: Real-time scene description for visually impaired users

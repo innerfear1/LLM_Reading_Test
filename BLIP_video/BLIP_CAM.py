@@ -31,7 +31,7 @@ class CaptionGenerator:
         参数:
         - processor: BLIP 预处理器
         - model: BLIP 模型
-        - device: 推理设备（如 'mps'）
+        - device: 推理设备（如 'mps')
         """
         self.processor = processor
         self.model = model
