@@ -1,0 +1,54 @@
+# Gradio Web UI Requirements
+gradio>=4.0.0
+fastapi>=0.100.0
+uvicorn>=0.20.0
+pydantic>=2.0.0
+python-multipart>=0.0.6
+aiofiles>=23.0.0
+redis>=4.5.0
+celery>=5.3.0
+
+# Stable Diffusion
+torch>=2.0.0
+torchvision>=0.15.0
+diffusers>=0.30.0
+transformers>=4.30.0
+accelerate>=0.20.0
+safetensors>=0.3.0
+controlnet-aux>=0.0.6
+xformers>=0.0.20
+
+# Image Processing
+Pillow>=9.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# Video Processing
+opencv-python>=4.8.0
+moviepy>=1.0.3
+
+# BLIP Video
+torch>=2.0.0
+transformers>=4.30.0
+Pillow>=9.0.0
+
+# Nano GPT
+torch>=2.0.0
+transformers>=4.30.0
+tokenizers>=0.13.0
+
+# Utilities
+requests>=2.31.0
+tqdm>=4.65.0
+huggingface-hub>=0.16.0
+datasets>=2.14.0
+
+# Monitoring & Logging
+prometheus-client>=0.17.0
+structlog>=23.0.0
+
+# Development
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0

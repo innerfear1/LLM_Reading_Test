@@ -14,3 +14,9 @@ venv/
 .idea/
 .vscode/
 .DS_Store
+
+# 模型文件
+Gradio_Web/models/
+
+# 生成文件
+Gradio_Web/outputs/

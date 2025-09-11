@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  ai-workbench:
+    build: .
+    ports:
+      - "7860:7860"  # Gradio UI
+      - "8000:8000"  # FastAPI Backend
+    volumes:
+      - ./outputs:/app/outputs
+      - ./cache:/app/cache
+      - ./models:/app/models  # 可选：挂载模型目录
+    environment:
+      - PYTHONPATH=/app
+      - PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+        reservations:
+          memory: 4G
+
+  # 可选：Redis缓存服务
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  redis_data:
